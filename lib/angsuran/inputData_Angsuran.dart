@@ -63,8 +63,8 @@ class InputdataAngsuran extends StatelessWidget {
                 const SizedBox(height: 16),
                 _buildTextField(
                   controller: pembayaranController,
-                  label: 'Jumlah Angsuran',
-                  hint: 'Masukkan jumlah Angsuran',
+                  label: 'Jumlah Pembayaran Angsuran',
+                  hint: 'Masukkan jumlah pembayaran Angsuran',
                   icon: Icons.payment,
                   keyboardType: TextInputType.number,
                 ),
