@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mob3_uas_klp_06/UI/logout.dart';
+import 'package:mob3_uas_klp_06/angsuran/data_angsuran.dart';
 import 'package:mob3_uas_klp_06/dasboard/Dasboard.dart';
 // navigasi
 import 'package:mob3_uas_klp_06/dasboard/navigasi/help.dart';
@@ -9,6 +10,8 @@ import 'package:mob3_uas_klp_06/dasboard/navigasi/setting.dart';
 import 'package:mob3_uas_klp_06/data_anggota/dataAnggota.dart';
 import 'package:mob3_uas_klp_06/pembayaran/dataPembayaran.dart';
 import 'package:mob3_uas_klp_06/pinjaman/dataPinjaman.dart';
+
+
 
 void main() {
   runApp(DashboardApp());
@@ -175,6 +178,14 @@ class DashboardScreen extends StatelessWidget {
                           builder: (context) => DataPinjamanScreen()),
                     );
                   }),
+                   const SizedBox(width: 10),
+                  _buildButton(context, 'Form \n Angsuran', Colors.purple, () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DataAngsuran()),
+                    );
+                  }),
                   const SizedBox(width: 10),
                   _buildButton(context, 'Form \n Pembayaran', Colors.orange,
                       () {
@@ -327,6 +338,26 @@ class InputPinjamanScreen extends StatelessWidget {
       body: const Center(
         child: Text(
           'Form untuk menginput pinjaman',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
+    );
+  }
+}
+
+class InputdataAngsuran extends StatelessWidget {
+  const InputdataAngsuran({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Form Angsuran'),
+        backgroundColor: Colors.green,
+      ),
+      body: const Center(
+        child: Text(
+          'Form untuk menginput Angsuran',
           style: TextStyle(fontSize: 24),
         ),
       ),
